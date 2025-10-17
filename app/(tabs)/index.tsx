@@ -21,6 +21,6 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1},
+  container: { flex: 1, backgroundColor: 'black' },
   input: { fontSize: 20, color: 'white' }
 });
