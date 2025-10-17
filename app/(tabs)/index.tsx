@@ -5,21 +5,16 @@ import {
 } from "react-native-keyboard-controller";
 
 export default function HomeScreen() {
-  const [text, setText] = React.useState("");
 
   return (
     <View style={styles.container}>
-      <KeyboardAwareScrollView>
-        <View style={styles.contentContainer}>
-          <TextInput
-            autoFocus
-            multiline
-            value={text}
-            onChangeText={(value) => setText(value)}
-            scrollEnabled={false}
-            style={styles.input}
-          />
-        </View>
+      <KeyboardAwareScrollView bottomOffset={20}>
+        <TextInput
+          autoFocus
+          multiline
+          scrollEnabled={false}
+          style={styles.input}
+        />
       </KeyboardAwareScrollView>
     </View>
   );
@@ -27,6 +22,5 @@ export default function HomeScreen() {
 
 const styles = StyleSheet.create({
   container: { flex: 1},
-  contentContainer: { padding: 16, borderWidth: 1, borderColor: 'lightgray' },
-  input: { fontSize: 45 }
+  input: { fontSize: 20, color: 'white' }
 });
